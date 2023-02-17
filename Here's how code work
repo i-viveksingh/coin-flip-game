@@ -1,0 +1,6 @@
+The contract has an owner variable to keep track of the owner of the contract, a betAmount variable to set the betting amount, and a playerBets mapping to keep track of each player's bets.
+The constructor function sets the owner variable to the contract deployer's address and the betAmount to 1 ether.
+The flipCoin function is used to play the game. It requires the caller to send exactly betAmount ether. If the current block's timestamp is even, the player wins and receives double the betting amount. Otherwise, the player loses and the contract keeps the ether.
+The playerBets mapping is updated to record the player's bet.
+The withdraw function allows the owner to withdraw the contract balance.
+
